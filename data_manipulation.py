@@ -32,7 +32,7 @@ driver_id_np = (driver_id).to_numpy()
 ride_id_np = (ride_id).to_numpy()
 ride_time_np = (ride_time).to_numpy()
 
-
+# To list
 driver_id_li = (driver_id_np).tolist()
 ride_id_li = (ride_id_np).tolist()
 ride_time_li = (ride_time_np).tolist()
