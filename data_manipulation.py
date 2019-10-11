@@ -236,6 +236,7 @@ for i in Driver_ID_LIST:
 # Convert to numpy array
 driver_days_nparray = np.asarray(Driver_day_list).reshape(-1,1)
 
-# Mix 2 features together 
+# Mix 2 features together
 a = np.append(driver_id_nparray,driver_days_nparray,axis = 1)
+# Print out the numpy array
 print(a)
