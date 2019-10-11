@@ -327,6 +327,7 @@ for i in Driver_ID_LIST:
     if i in driver_dist_dict:
         total_dist_list.append(driver_dist_dict[i][0])
 
+
 total_dist_nparray = np.asarray(total_dist_list).reshape(-1,1)
 
 # Check Shape
