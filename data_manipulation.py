@@ -369,4 +369,5 @@ for i in Driver_ID_LIST:
         total_time_list.append(driver_time_dict[i])
 
 total_time_nparray = np.asarray(total_time_list).reshape(-1,1)
+
 print(total_time_nparray.shape)
