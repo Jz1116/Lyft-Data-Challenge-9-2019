@@ -271,4 +271,6 @@ for i in range(len(Driver_ID_LIST)):
     for k in range(len(ride_id_li)):
         if Driver_ID_LIST[i] == ride_id_li[k][0]:
             print("yes")
-            Driver_total_primetime[Driver_ID_LIST[i]].append(ride_id_li[k][4]) 
+            Driver_total_primetime[Driver_ID_LIST[i]].append(ride_id_li[k][4])
+
+print(Driver_total_primetime['007f0389f9c7b03ef97098422f902e62']) 
