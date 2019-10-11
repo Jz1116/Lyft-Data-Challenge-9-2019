@@ -114,4 +114,6 @@ print(driver_alltripsdict['007f0389f9c7b03ef97098422f902e62'])
 for i in driver_alltripsdict.keys():
     for j in range(len(driver_alltripsdict[i])):
         driver_alltripsdict[i][j] = driver_alltripsdict[i][j].split()[0].split("-")[1:]
+
+# Print out all months and days of all rides given a driver id
 print(driver_alltripsdict['007f0389f9c7b03ef97098422f902e62'])
