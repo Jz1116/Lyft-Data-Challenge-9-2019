@@ -503,3 +503,6 @@ print(featurelist[0])
 LFTlist = np.array(driver_LTV_nparrays).reshape(len(driver_LTV_nparrays))
 # Check Shape
 print(LFTlist.shape)
+
+# training-testing split
+train_features, test_features, train_labels, test_labels = train_test_split(featurelist, LFTlist, test_size = 0.25, random_state = 42)
