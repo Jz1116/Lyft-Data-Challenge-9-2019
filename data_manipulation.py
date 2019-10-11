@@ -273,4 +273,5 @@ for i in range(len(Driver_ID_LIST)):
             print("yes")
             Driver_total_primetime[Driver_ID_LIST[i]].append(ride_id_li[k][4])
 
-print(Driver_total_primetime['007f0389f9c7b03ef97098422f902e62']) 
+# Print out relative level of prime time
+print(Driver_total_primetime['007f0389f9c7b03ef97098422f902e62'])
