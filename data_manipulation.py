@@ -122,4 +122,6 @@ print(driver_alltripsdict['007f0389f9c7b03ef97098422f902e62'])
 for i in driver_alltripsdict.keys():
     for j in range(len(driver_alltripsdict[i])):
         driver_alltripsdict[i][j] = [int(driver_alltripsdict[i][j][0]),int(driver_alltripsdict[i][j][1])]
+
+# Print
 print(driver_alltripsdict['052bba06c5fc0bdea4bc2f9cb92b37c7'])
