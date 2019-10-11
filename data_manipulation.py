@@ -512,3 +512,22 @@ print('Training Features Shape: ', train_features.shape)
 print('Training Labels Shape: ', train_labels.shape)
 print('Testing Features Shape: ', test_features.shape)
 print('Testing Labels Shape: ', test_labels.shape)
+
+# method1: random forest
+rf = RandomForestRegressor(n_estimators = 1, random_state = 187)
+rf.fit(train_features, train_labels)
+#Make Predictions
+#Use the forest's predict method on the test data
+predictions = rf.predict(test_features)
+
+#Calculate the absolute errors
+errors = abs(predictions - test_labels)
+
+#print out the mean absolute error
+print('Mean Absolute Error:', round(np.mean(errors), 2), 'newton.')
+# Calculate mean absolute percentage error
+mape = 100 * (errors / test_labels)
+
+# Calculate and display accuracy
+accuracy = 100 - np.mean(mape)
+print('Accuracy:', round(accuracy, 2), '%.')
