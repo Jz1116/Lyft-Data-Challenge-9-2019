@@ -166,6 +166,20 @@ signal = 0
 for i in driver_on_offdict.keys():
     if len(driver_alltripsdict[i]) != 2:
         signal += 1
-        
+
 # print
 print(signal)
+
+'''calculate date difference'''
+for i in driver_on_offdict.keys():
+    lastMonth = driver_on_offdict[i][0][0]
+    lastDay = driver_on_offdict[i][0][1]
+    startMonth = driver_on_offdict[i][1][0]
+    startDay = driver_on_offdict[i][1][1]
+
+    startDays = (startMonth - 1) * 30 + startDay
+    lastDays = (lastMonth - 1) * 30 + lastDay
+
+    difference = lastDays - startDays
+    driver_on_offdict[i] = difference
+print(driver_on_offdict['fff482c704d36a1afe8b8978d5486283']) 
