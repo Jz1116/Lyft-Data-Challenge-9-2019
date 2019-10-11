@@ -45,3 +45,5 @@ for i in range(len(ride_id_li)):
     if fare >400:
         fare = 400
     ride_id_li[i].append(fare)
+
+print(ride_id_li[0][5])
