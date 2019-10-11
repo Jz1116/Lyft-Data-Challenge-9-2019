@@ -332,3 +332,12 @@ total_dist_nparray = np.asarray(total_dist_list).reshape(-1,1)
 
 # Check Shape
 print(total_dist_nparray.shape)
+
+'''feature5: total number of rides'''
+total_numrides_list = []
+for i in Driver_ID_LIST:
+    if i in driver_dist_dict:
+        total_numrides_list.append(driver_dist_dict[i][1])
+
+total_numrides_nparray = np.asarray(total_numrides_list).reshape(-1,1)
+print(total_numrides_nparray.shape)
