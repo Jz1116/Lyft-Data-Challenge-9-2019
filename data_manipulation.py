@@ -557,3 +557,8 @@ accuracy = 100 - np.mean(mape)
 print('Accuracy:', round(accuracy, 2), '%.')
 print(pmax_pred)
 print(test_labels)
+
+"""Generate graph for linear regression"""
+from pandas import DataFrame
+new = DataFrame(pmax_pred, test_labels)
+new.to_csv("line_to_scatter_converter.csv")
