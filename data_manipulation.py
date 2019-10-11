@@ -166,4 +166,5 @@ signal = 0
 for i in driver_on_offdict.keys():
     if len(driver_alltripsdict[i]) != 2:
         signal += 1
+# print
 print(signal)
