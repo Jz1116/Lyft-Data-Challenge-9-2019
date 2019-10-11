@@ -148,5 +148,6 @@ for i in driver_alltripsdict.keys():
         if i == k[0]:
             driver_alltripsdict[i].append(k[1].split()[0].split("-")[1:])
 
+
 # print onboarding date and last boarding date
 print(driver_alltripsdict['052bba06c5fc0bdea4bc2f9cb92b37c7'])
