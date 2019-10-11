@@ -20,3 +20,7 @@ def read(file):
 driver_id = read('driver_ids.csv')
 ride_id = read('ride_ids.csv')
 ride_time = read('ride_timestamps.csv')
+ride_time = ride_time[ride_time.event != 'requested_at']
+ride_time = ride_time[ride_time.event != 'accepted_at']
+ride_time = ride_time[ride_time.event != 'picked_up_at']
+ride_time = ride_time[ride_time.event != 'arrived_at']
