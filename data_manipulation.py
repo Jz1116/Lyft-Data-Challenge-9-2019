@@ -480,3 +480,18 @@ for i in Driver_ID_LIST:
 
 accept_pick_nparray = np.asarray(accept_pick_list).reshape(-1,1)
 print(accept_pick_nparray.shape)
+
+#featurelist = np.append(driver_id_nparray,driver_days_nparray,axis = 1)
+featurelist = 0
+featurelist = np.append(driver_days_nparray, Driver_primetime_nparrays,axis = 1)
+featurelist = np.append(featurelist,total_dist_nparray ,axis = 1)
+featurelist = np.append(featurelist, total_numrides_nparray,axis = 1)
+featurelist = np.append(featurelist, total_time_nparray,axis = 1)
+featurelist = np.append(featurelist,march_nparray ,axis = 1)
+featurelist = np.append(featurelist, april_nparray,axis = 1)
+featurelist = np.append(featurelist,may_nparray ,axis = 1)
+featurelist = np.append(featurelist,accept_pick_nparray,axis = 1)
+featurelist = np.array(featurelist)
+#feature scaling
+featurelist = StandardScaler().fit_transform(featurelist)
+print(featurelist[0])
