@@ -79,3 +79,20 @@ for i in driver_rideiddict.keys():
 
 # print
 print(rideid_driverdict['01f133164433ea7682545a41643e6949'])
+
+# Map ride id to driver id and ride's specific time
+rideid_driver_timedict = {}
+for i in ride_time_li:
+    if i[0] in rideid_driverdict:
+        rideid_driverdict[i[0]].append(i[2])
+
+for i in rideid_driverdict.keys():
+    if len(rideid_driverdict[i]) == 2:
+        rideid_driver_timedict[i] = rideid_driverdict[i]
+
+print(rideid_driver_timedict['07f9b5246c8431e3e5bac56d9f48b4f9'])
+signal = 0
+for i in rideid_driver_timedict.values():
+    if len(i) != 2:
+        siganl += 1
+print(signal)
