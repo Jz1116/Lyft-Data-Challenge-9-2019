@@ -328,4 +328,5 @@ for i in Driver_ID_LIST:
         total_dist_list.append(driver_dist_dict[i][0])
 
 total_dist_nparray = np.asarray(total_dist_list).reshape(-1,1)
+
 print(total_dist_nparray.shape)
