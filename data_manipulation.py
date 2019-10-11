@@ -201,6 +201,7 @@ for i in farelist:
 
 # Print the total fare of a driver
 print(farelistnew[0])
+
 sum4 = 0
 for i in farelistnew:
     sum4 +=  i
