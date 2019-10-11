@@ -56,4 +56,5 @@ for i in ride_id_li:
     else:
         driver_faredict[i[0]].append(i[5])
 
+# Print out all fares given one driver identity
 print(driver_faredict['052bba06c5fc0bdea4bc2f9cb92b37c7'])
