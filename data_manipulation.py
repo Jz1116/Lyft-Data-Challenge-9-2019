@@ -261,6 +261,7 @@ for i in Driver_ID_LIST:
 # Conver to numpy array
 driver_LTV_nparrays = np.asarray(Driver_LTV_list).reshape(-1,1)
 
+
 '''feature3: Primetime Percentage for each driver'''
 Driver_total_primetime = {}
 for i in range(len(Driver_ID_LIST)):
