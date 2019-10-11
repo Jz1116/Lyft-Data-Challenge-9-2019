@@ -151,3 +151,19 @@ for i in driver_alltripsdict.keys():
 
 # print onboarding date and last boarding date
 print(driver_alltripsdict['052bba06c5fc0bdea4bc2f9cb92b37c7'])
+
+'''convert to int'''
+for i in driver_alltripsdict.keys():
+    for j in range(len(driver_alltripsdict[i])):
+        driver_alltripsdict[i][j] = [int(driver_alltripsdict[i][j][0]),int(driver_alltripsdict[i][j][1])]
+print(driver_alltripsdict['052bba06c5fc0bdea4bc2f9cb92b37c7'])
+
+driver_on_offdict = {}
+for i in driver_alltripsdict.keys():
+    if len(driver_alltripsdict[i]) == 2:
+        driver_on_offdict[i] = driver_alltripsdict[i]
+signal = 0
+for i in driver_on_offdict.keys():
+    if len(driver_alltripsdict[i]) != 2:
+        signal += 1
+print(signal)
