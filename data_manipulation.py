@@ -183,5 +183,5 @@ for i in driver_on_offdict.keys():
     difference = lastDays - startDays
     driver_on_offdict[i] = difference
 
-
+# print the date difference of a driver
 print(driver_on_offdict['fff482c704d36a1afe8b8978d5486283'])
