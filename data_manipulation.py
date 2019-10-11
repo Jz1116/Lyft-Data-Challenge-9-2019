@@ -59,3 +59,10 @@ for i in ride_id_li:
 
 # Print out all fares given one driver identity
 print(driver_faredict['052bba06c5fc0bdea4bc2f9cb92b37c7'])
+
+driver_rideiddict = {}
+for i in ride_id_li:
+    if i[0] not in driver_rideiddict:
+        driver_rideiddict[i[0]] = [i[1]]
+    else:
+        driver_rideiddict[i[0]].append(i[1])
