@@ -571,3 +571,17 @@ final = pd.read_csv("lts_sort.csv")
 index = final.index
 pmax_pred = final["predict"]
 label = final["truth"]
+
+fig = plt.figure(figsize=(20,11))
+plt.xlabel("Test Datapoints", fontsize = 25)
+plt.ylabel("Pmax", fontsize = 25)
+plt.title("Linear Regression Prediction vs Actual Values", fontsize = 25)
+
+plt.scatter(index, pmax_pred, color = "r", label = "Predictive Model", marker = "x", s = 100)
+plt.scatter(index, label, color = "b", alpha = 0.7, label = "Test Label")
+
+plt.legend(loc = 2, prop = {"size" : 20})
+
+
+
+plt.savefig("Linear_Regression_Plot.png")
