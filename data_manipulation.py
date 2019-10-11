@@ -215,4 +215,6 @@ averageDay = 0
 for i in driver_on_offdict.keys():
     averageDay += driver_on_offdict[i]
 averageDay /= len(driver_on_offdict)
+
+
 print(round(averageDay, 3))
