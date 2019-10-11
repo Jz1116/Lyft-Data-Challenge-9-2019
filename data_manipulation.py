@@ -26,3 +26,7 @@ ride_time = ride_time[ride_time.event != 'requested_at']
 ride_time = ride_time[ride_time.event != 'accepted_at']
 ride_time = ride_time[ride_time.event != 'picked_up_at']
 ride_time = ride_time[ride_time.event != 'arrived_at']
+
+driver_id_np = (driver_id).to_numpy()
+ride_id_np = (ride_id).to_numpy()
+ride_time_np = (ride_time).to_numpy()
