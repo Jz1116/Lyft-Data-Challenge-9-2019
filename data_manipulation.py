@@ -329,4 +329,5 @@ for i in Driver_ID_LIST:
 
 total_dist_nparray = np.asarray(total_dist_list).reshape(-1,1)
 
+# Check Shape
 print(total_dist_nparray.shape)
