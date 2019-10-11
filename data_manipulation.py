@@ -206,4 +206,5 @@ sum4 = 0
 for i in farelistnew:
     sum4 +=  i
 newaverage = sum4/len(farelistnew)
+
 print(round(newaverage, 3))
