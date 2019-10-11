@@ -99,6 +99,7 @@ for i in rideid_driver_timedict.values():
 # Given Ride id print out driver id and time
 print(signal)
 
+# Map driver id to all rides' time
 driver_alltripsdict = {}
 for i in rideid_driver_timedict.keys():
     if rideid_driver_timedict[i][0] not in driver_alltripsdict:
