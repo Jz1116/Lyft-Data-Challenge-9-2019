@@ -13,3 +13,6 @@ from sklearn import linear_model
 from sklearn.ensemble import BaggingClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import Perceptron
+
+def read(file):
+    return pd.read_csv(file)
