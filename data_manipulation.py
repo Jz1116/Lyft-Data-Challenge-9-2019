@@ -373,3 +373,45 @@ total_time_nparray = np.asarray(total_time_list).reshape(-1,1)
 
 # Check shape
 print(total_time_nparray.shape)
+
+"""feature7: month (categorical) ---> march"""
+driver_onboard_dict = {}
+for i in driver_id_li:
+    driver_onboard_dict[i[0]] = int(i[1].split()[0].split("-")[1])
+
+print(driver_onboard_dict["11506b81721ca68ef019764de3d8edbd"])
+
+march_list = []
+for i in Driver_ID_LIST:
+    if i in driver_onboard_dict:
+        if driver_onboard_dict[i] == 3:
+            march_list.append(1)
+        else:
+            march_list.append(0)
+
+march_nparray = np.asarray(march_list).reshape(-1,1)
+print(march_nparray.shape)
+
+"""feature7: month (categorical) ---> april"""
+april_list = []
+for i in Driver_ID_LIST:
+    if i in driver_onboard_dict:
+        if driver_onboard_dict[i] == 4:
+            april_list.append(1)
+        else:
+            april_list.append(0)
+
+april_nparray = np.asarray(april_list).reshape(-1,1)
+print(april_nparray.shape)
+
+"""feature7: month (categorical) ---> may"""
+may_list = []
+for i in Driver_ID_LIST:
+    if i in driver_onboard_dict:
+        if driver_onboard_dict[i] == 5:
+            may_list.append(1)
+        else:
+            may_list.append(0)
+
+may_nparray = np.asarray(may_list).reshape(-1,1)
+print(may_nparray.shape)
