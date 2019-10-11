@@ -223,6 +223,7 @@ print(round(averageDay, 3))
 Driver_ID_LIST = []
 for i in driver_on_offdict.keys():
     Driver_ID_LIST.append(i)
+    
 # Convert to numpy array
 driver_id_nparray = np.asarray(Driver_ID_LIST).reshape(-1,1)
 
