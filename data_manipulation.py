@@ -232,4 +232,3 @@ for i in Driver_ID_LIST:
     if i in driver_on_offdict:
         Driver_day_list.append(driver_on_offdict[i])
 driver_days_nparray = np.asarray(Driver_day_list).reshape(-1,1)
-print(driver_days_nparray.shape)
