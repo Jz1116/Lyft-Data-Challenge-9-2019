@@ -499,6 +499,7 @@ featurelist = StandardScaler().fit_transform(featurelist)
 # Get first row of the featurelist
 print(featurelist[0])
 
+
 LFTlist = np.array(driver_LTV_nparrays).reshape(len(driver_LTV_nparrays))
 
 print(LFTlist.shape)
