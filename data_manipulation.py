@@ -185,3 +185,22 @@ for i in driver_on_offdict.keys():
 
 # print the date difference of a driver
 print(driver_on_offdict['fff482c704d36a1afe8b8978d5486283'])
+
+'''Average Lifetime Value'''
+farelist = []
+farelistnew = []
+for i in driver_on_offdict.keys():
+    for k in driver_faredict.keys():
+        if i == k:
+            farelist.append(driver_faredict[k])
+for i in farelist:
+    sum3 = 0
+    for k in i:
+        sum3 += k
+    farelistnew.append(sum3)
+print(farelistnew[0])
+sum4 = 0
+for i in farelistnew:
+    sum4 +=  i
+newaverage = sum4/len(farelistnew)
+print(round(newaverage, 3))
