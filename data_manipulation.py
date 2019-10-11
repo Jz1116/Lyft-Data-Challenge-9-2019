@@ -289,5 +289,6 @@ print(Driver_total_primetime['007f0389f9c7b03ef97098422f902e62'])
 Driver_primetime_list = []
 for i in Driver_total_primetime:
     Driver_primetime_list.append(Driver_total_primetime[i])
+# Convert to numpy array
 Driver_primetime_nparrays = np.asarray(Driver_primetime_list).reshape(-1,1)
 print(Driver_primetime_nparrays.shape)
