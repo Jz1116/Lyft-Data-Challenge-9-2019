@@ -415,3 +415,68 @@ for i in Driver_ID_LIST:
 
 may_nparray = np.asarray(may_list).reshape(-1,1)
 print(may_nparray.shape)
+
+'''feature8: accepted to pickup interval time'''
+ride_timenew = read('ride_timestamps.csv')
+ride_timenew = ride_timenew[ride_timenew.event != 'requested_at']
+ride_timenew = ride_timenew[ride_timenew.event != 'dropped_off_at']
+ride_timenew = ride_timenew[ride_timenew.event != 'arrived_at']
+ride_time_npnew = (ride_timenew).to_numpy()
+ride_time_linew = (ride_time_npnew).tolist()
+accept_pick_intervaldict = {}
+
+for k in ride_time_linew:
+    if k[0] in rideid_driverdict:
+        if k[0] not in accept_pick_intervaldict:
+            accept_pick_intervaldict[k[0]] = [k[2].split()[1]]
+        else:
+            accept_pick_intervaldict[k[0]].append(k[2].split()[1])
+print(accept_pick_intervaldict["00006efeb0d5e3ccad7d921ddeee9900"])
+
+for i in accept_pick_intervaldict.keys():
+    accept_time = accept_pick_intervaldict[i][0].split(":")
+    pick_time = accept_pick_intervaldict[i][1].split(":")
+
+    accept_hour = int(accept_time[0])
+    accept_minute = int(accept_time[1])
+    accept_second = int(accept_time[2])
+
+    pick_hour = int(pick_time[0])
+    pick_minute = int(pick_time[1])
+    pick_second = int(pick_time[2])
+
+    if pick_hour == 0 and accept_hour == 23:
+        pick_hour = 24
+    time_difference = (pick_hour - accept_hour) * 60 + (pick_minute - accept_minute) + (pick_second - accept_second)/60
+    time_difference = round(time_difference, 2)
+    accept_pick_intervaldict[i] = [time_difference]
+
+for i in rideid_driverdict.keys():
+    if i in accept_pick_intervaldict:
+        accept_pick_intervaldict[i].append(rideid_driverdict[i][0])
+print(accept_pick_intervaldict["00006efeb0d5e3ccad7d921ddeee9900"])
+
+driver_interval_dict = {}
+for i in accept_pick_intervaldict.keys():
+    if accept_pick_intervaldict[i][1] not in driver_interval_dict:
+        driver_interval_dict[accept_pick_intervaldict[i][1]] = [accept_pick_intervaldict[i][0]]
+    else:
+        driver_interval_dict[accept_pick_intervaldict[i][1]].append(accept_pick_intervaldict[i][0])
+
+
+for i in driver_interval_dict:
+    total = 0
+    num = 0
+    for j in driver_interval_dict[i]:
+        total += j
+        num += 1
+    driver_interval_dict[i] = total / num
+print(driver_interval_dict["039da9c077e17af98ca8530e4d7975f1"])
+
+accept_pick_list = []
+for i in Driver_ID_LIST:
+    if i in driver_interval_dict:
+        accept_pick_list.append(driver_interval_dict[i])
+
+accept_pick_nparray = np.asarray(accept_pick_list).reshape(-1,1)
+print(accept_pick_nparray.shape)
