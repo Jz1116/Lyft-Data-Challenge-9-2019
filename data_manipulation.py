@@ -341,5 +341,5 @@ for i in Driver_ID_LIST:
 
 total_numrides_nparray = np.asarray(total_numrides_list).reshape(-1,1)
 
-
+# Check shape
 print(total_numrides_nparray.shape)
