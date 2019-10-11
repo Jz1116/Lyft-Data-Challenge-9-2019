@@ -138,4 +138,6 @@ for i in driver_alltripsdict.keys():
             if j[1] > day:
                 day = j[1]
     driver_alltripsdict[i] = [[month, day]]
-print(driver_alltripsdict['052bba06c5fc0bdea4bc2f9cb92b37c7'])   
+
+# print
+print(driver_alltripsdict['052bba06c5fc0bdea4bc2f9cb92b37c7'])
