@@ -258,4 +258,5 @@ for i in Driver_ID_LIST:
     if i in LTV_dict:
         Driver_LTV_list.append(LTV_dict[i])
 
+# Conver to numpy array
 driver_LTV_nparrays = np.asarray(Driver_LTV_list).reshape(-1,1)
