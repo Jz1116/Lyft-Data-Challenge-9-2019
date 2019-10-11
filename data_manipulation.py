@@ -368,6 +368,7 @@ for i in Driver_ID_LIST:
     if i in driver_time_dict:
         total_time_list.append(driver_time_dict[i])
 
+
 total_time_nparray = np.asarray(total_time_list).reshape(-1,1)
 
 # Check shape
