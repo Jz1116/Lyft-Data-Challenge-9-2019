@@ -585,3 +585,13 @@ plt.legend(loc = 2, prop = {"size" : 20})
 
 
 plt.savefig("Linear_Regression_Plot.png")
+
+"""Create heat map"""
+import seaborn as sns
+
+plt.figure(figsize=(6,4))
+s=sns.heatmap(pd.DataFrame(featurelist).corr(),cmap='coolwarm')
+s.set_yticklabels(s.get_yticklabels(),rotation=30,fontsize=7)
+s.set_xticklabels(s.get_xticklabels(),rotation=30,fontsize=7)
+plt.savefig('heat_map.png')
+plt.show()
