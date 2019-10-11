@@ -595,3 +595,8 @@ s.set_yticklabels(s.get_yticklabels(),rotation=30,fontsize=7)
 s.set_xticklabels(s.get_xticklabels(),rotation=30,fontsize=7)
 plt.savefig('heat_map.png')
 plt.show()
+
+from sklearn.externals.six import StringIO
+from IPython.display import Image
+from sklearn.tree import export_graphviz
+import pydotplus
