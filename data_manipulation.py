@@ -240,3 +240,23 @@ driver_days_nparray = np.asarray(Driver_day_list).reshape(-1,1)
 a = np.append(driver_id_nparray,driver_days_nparray,axis = 1)
 # Print out the numpy array
 print(a)
+
+'''Target: Life Time Value'''
+LTV_dict = {}
+Driver_LTV_list = []
+for i in driver_on_offdict.keys():
+    for j in driver_faredict.keys():
+        if (i == j):
+            LTV_dict[j] = driver_faredict[j]
+for i in LTV_dict.keys():
+    total = 0
+    for j in LTV_dict[i]:
+        total += j
+    LTV_dict[i] = total
+
+for i in Driver_ID_LIST:
+    if i in LTV_dict:
+        Driver_LTV_list.append(LTV_dict[i])
+
+driver_LTV_nparrays = np.asarray(Driver_LTV_list).reshape(-1,1)
+print(driver_LTV_nparrays.shape)
