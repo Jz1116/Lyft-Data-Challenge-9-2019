@@ -481,6 +481,7 @@ for i in Driver_ID_LIST:
 accept_pick_nparray = np.asarray(accept_pick_list).reshape(-1,1)
 print(accept_pick_nparray.shape)
 
+"""mix together"""
 #featurelist = np.append(driver_id_nparray,driver_days_nparray,axis = 1)
 featurelist = 0
 featurelist = np.append(driver_days_nparray, Driver_primetime_nparrays,axis = 1)
