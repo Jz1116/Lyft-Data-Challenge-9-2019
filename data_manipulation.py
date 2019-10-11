@@ -70,3 +70,9 @@ for i in ride_id_li:
 
 # print ride id given a driver id
 print(driver_rideiddict['007f0389f9c7b03ef97098422f902e62'])
+
+rideid_driverdict = {}
+for i in driver_rideiddict.keys():
+    for j in driver_rideiddict[i]:
+        rideid_driverdict[j] = [i]
+print(rideid_driverdict['01f133164433ea7682545a41643e6949'])
