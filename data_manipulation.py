@@ -95,6 +95,13 @@ signal = 0
 for i in rideid_driver_timedict.values():
     if len(i) != 2:
         siganl += 1
-        
+
 # Given Ride id print out driver id and time
 print(signal)
+
+driver_alltripsdict = {}
+for i in rideid_driver_timedict.keys():
+    if rideid_driver_timedict[i][0] not in driver_alltripsdict:
+        driver_alltripsdict[rideid_driver_timedict[i][0]] = [rideid_driver_timedict[i][1]]
+    elif rideid_driver_timedict[i][0] in driver_alltripsdict:
+        driver_alltripsdict[rideid_driver_timedict[i][0]].append(rideid_driver_timedict[i][1])
