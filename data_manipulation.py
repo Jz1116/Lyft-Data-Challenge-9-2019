@@ -506,3 +506,9 @@ print(LFTlist.shape)
 
 # training-testing split
 train_features, test_features, train_labels, test_labels = train_test_split(featurelist, LFTlist, test_size = 0.25, random_state = 42)
+
+# Check Shape
+print('Training Features Shape: ', train_features.shape)
+print('Training Labels Shape: ', train_labels.shape)
+print('Testing Features Shape: ', test_features.shape)
+print('Testing Labels Shape: ', test_labels.shape)
