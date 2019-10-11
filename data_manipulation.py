@@ -35,3 +35,4 @@ ride_time_np = (ride_time).to_numpy()
 
 driver_id_li = (driver_id_np).tolist()
 ride_id_li = (ride_id_np).tolist()
+ride_time_li = (ride_time_np).tolist()
