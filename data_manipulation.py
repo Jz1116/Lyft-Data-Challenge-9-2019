@@ -46,5 +46,12 @@ for i in range(len(ride_id_li)):
         fare = 400
     ride_id_li[i].append(fare)
 
-# Print out one of the fare 
+# Print out one of the fare
 print(ride_id_li[0][5])
+
+driver_faredict = {}
+for i in ride_id_li:
+    if i[0] not in driver_faredict:
+        driver_faredict[i[0]] = [i[5]]
+    else:
+        driver_faredict[i[0]].append(i[5])
