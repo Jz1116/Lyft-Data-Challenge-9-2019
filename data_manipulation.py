@@ -49,6 +49,7 @@ for i in range(len(ride_id_li)):
 # Print out one of the fare
 print(ride_id_li[0][5])
 
+# Collecting fares for each driver using hashmap
 driver_faredict = {}
 for i in ride_id_li:
     if i[0] not in driver_faredict:
