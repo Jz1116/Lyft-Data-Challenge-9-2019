@@ -16,3 +16,7 @@ from sklearn.linear_model import Perceptron
 
 def read(file):
     return pd.read_csv(file)
+
+driver_id = read('driver_ids.csv')
+ride_id = read('ride_ids.csv')
+ride_time = read('ride_timestamps.csv')
