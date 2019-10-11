@@ -536,3 +536,24 @@ print('Accuracy:', round(accuracy, 2), '%.')
 clf = svm.SVR(kernel = "linear")
 clf.fit(train_features,train_labels)
 print(clf.score(train_features, train_labels))
+
+errors = 0
+pmax_pred = np.empty(test_labels.shape)
+i = 0
+for X,y in zip(test_features, test_labels):
+    print(f"Model: {clf.predict([X])[0]}, Actual: {y}")
+    errors += abs(clf.predict([X])[0] - y)
+    pmax_pred[i] = clf.predict([X])[0]
+    i += 1
+errors = errors / test_features.shape[0]
+
+print('Mean Absolute error:',round(errors, 2) , 'newton.')
+
+# Calculate mean absolute percentage error
+mape = 100 * (errors / test_labels)
+
+# Calculate and display accuracy
+accuracy = 100 - np.mean(mape)
+print('Accuracy:', round(accuracy, 2), '%.')
+print(pmax_pred)
+print(test_labels)
