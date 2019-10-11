@@ -513,7 +513,7 @@ print('Training Labels Shape: ', train_labels.shape)
 print('Testing Features Shape: ', test_features.shape)
 print('Testing Labels Shape: ', test_labels.shape)
 
-# method1: random forest
+"""method1: random forest"""
 rf = RandomForestRegressor(n_estimators = 1, random_state = 187)
 rf.fit(train_features, train_labels)
 #Make Predictions
