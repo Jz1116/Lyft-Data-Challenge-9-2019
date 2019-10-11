@@ -46,4 +46,5 @@ for i in range(len(ride_id_li)):
         fare = 400
     ride_id_li[i].append(fare)
 
+# Print out one of the fare 
 print(ride_id_li[0][5])
