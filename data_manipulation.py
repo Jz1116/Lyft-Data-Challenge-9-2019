@@ -67,3 +67,5 @@ for i in ride_id_li:
         driver_rideiddict[i[0]] = [i[1]]
     else:
         driver_rideiddict[i[0]].append(i[1])
+
+print(driver_rideiddict['007f0389f9c7b03ef97098422f902e62'])
