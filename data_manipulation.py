@@ -198,6 +198,8 @@ for i in farelist:
     for k in i:
         sum3 += k
     farelistnew.append(sum3)
+
+# Print the total fare of a driver
 print(farelistnew[0])
 sum4 = 0
 for i in farelistnew:
