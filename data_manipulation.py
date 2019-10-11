@@ -282,4 +282,6 @@ for i in Driver_total_primetime.keys():
         sum1 += k
     num = len(Driver_total_primetime[i])
     Driver_total_primetime[i] = sum1/num
-print(Driver_total_primetime['007f0389f9c7b03ef97098422f902e62']) 
+    
+# calculate prime time value for each driver as a unique feature
+print(Driver_total_primetime['007f0389f9c7b03ef97098422f902e62'])
