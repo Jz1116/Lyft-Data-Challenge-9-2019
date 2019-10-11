@@ -107,4 +107,5 @@ for i in rideid_driver_timedict.keys():
     elif rideid_driver_timedict[i][0] in driver_alltripsdict:
         driver_alltripsdict[rideid_driver_timedict[i][0]].append(rideid_driver_timedict[i][1])
 
+# Print out all rides' time give a driver id
 print(driver_alltripsdict['007f0389f9c7b03ef97098422f902e62'])
