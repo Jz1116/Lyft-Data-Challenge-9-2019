@@ -303,3 +303,29 @@ Driver_primetime_nparrays = np.asarray(Driver_primetime_list).reshape(-1,1)
 
 # Check shape if it is consistent with others
 print(Driver_primetime_nparrays.shape)
+
+'''feature4: total ride distance'''
+driver_dist_dict = {}
+for i in ride_id_li:
+    if i[0] not in driver_dist_dict:
+        driver_dist_dict[i[0]] = [i[2]]
+    else:
+        driver_dist_dict[i[0]].append(i[2])
+
+
+for i in driver_dist_dict.keys():
+    total_dist = 0
+    num_rides = 0
+    for j in driver_dist_dict[i]:
+        total_dist += j
+        num_rides += 1
+    driver_dist_dict[i] = [total_dist, num_rides]
+print(driver_dist_dict["002be0ffdc997bd5c50703158b7c2491"])
+
+total_dist_list = []
+for i in Driver_ID_LIST:
+    if i in driver_dist_dict:
+        total_dist_list.append(driver_dist_dict[i][0])
+
+total_dist_nparray = np.asarray(total_dist_list).reshape(-1,1)
+print(total_dist_nparray.shape)
