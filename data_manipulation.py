@@ -291,4 +291,6 @@ for i in Driver_total_primetime:
     Driver_primetime_list.append(Driver_total_primetime[i])
 # Convert to numpy array
 Driver_primetime_nparrays = np.asarray(Driver_primetime_list).reshape(-1,1)
+
+# Check shape if it is consistent with others
 print(Driver_primetime_nparrays.shape)
