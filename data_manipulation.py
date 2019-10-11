@@ -344,3 +344,29 @@ total_numrides_nparray = np.asarray(total_numrides_list).reshape(-1,1)
 
 # Check shape
 print(total_numrides_nparray.shape)
+
+'''feature6: total duration'''
+driver_time_dict = {}
+for i in ride_id_li:
+    if i[0] not in driver_time_dict:
+        driver_time_dict[i[0]] = [i[3]]
+    else:
+        driver_time_dict[i[0]].append(i[3])
+
+
+
+for i in driver_time_dict.keys():
+    total_time = 0
+    for j in driver_time_dict[i]:
+        total_time += j
+
+    driver_time_dict[i] = total_time / 60
+print(driver_time_dict["002be0ffdc997bd5c50703158b7c2491"])
+
+total_time_list = []
+for i in Driver_ID_LIST:
+    if i in driver_time_dict:
+        total_time_list.append(driver_time_dict[i])
+
+total_time_nparray = np.asarray(total_time_list).reshape(-1,1)
+print(total_time_nparray.shape)
