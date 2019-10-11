@@ -218,3 +218,10 @@ averageDay /= len(driver_on_offdict)
 
 # Print out average days
 print(round(averageDay, 3))
+
+'''feature1: Driver ID'''
+Driver_ID_LIST = []
+for i in driver_on_offdict.keys():
+    Driver_ID_LIST.append(i)
+driver_id_nparray = np.asarray(Driver_ID_LIST).reshape(-1,1)
+print(driver_id_nparray.shape)
