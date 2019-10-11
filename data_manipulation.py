@@ -495,4 +495,5 @@ featurelist = np.append(featurelist,accept_pick_nparray,axis = 1)
 featurelist = np.array(featurelist)
 #feature scaling
 featurelist = StandardScaler().fit_transform(featurelist)
+# Get first row of the featurelist
 print(featurelist[0])
