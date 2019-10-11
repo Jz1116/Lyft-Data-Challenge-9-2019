@@ -600,3 +600,20 @@ from sklearn.externals.six import StringIO
 from IPython.display import Image
 from sklearn.tree import export_graphviz
 import pydotplus
+
+"""Create graph for decision tree"""
+from sklearn.tree import DecisionTreeRegressor
+from sklearn import tree
+import io
+clf = DecisionTreeRegressor()
+model = clf.fit(train_features, train_labels)
+
+# Create DOT data
+dot_data = tree.export_graphviz(clf, out_file=None,
+                                )
+
+# Draw graph
+graph = pydotplus.graph_from_dot_data(dot_data)
+
+# Show graph
+Image(graph.create_png())
