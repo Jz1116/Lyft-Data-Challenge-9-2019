@@ -125,3 +125,17 @@ for i in driver_alltripsdict.keys():
 
 # Print
 print(driver_alltripsdict['052bba06c5fc0bdea4bc2f9cb92b37c7'])
+
+'''last bording date'''
+for i in driver_alltripsdict.keys():
+    month = 1
+    day = 1
+    for j in driver_alltripsdict[i]:
+        if j[0] > month:
+            month = j[0]
+            day = j[1]
+        elif j[0] == month:
+            if j[1] > day:
+                day = j[1]
+    driver_alltripsdict[i] = [[month, day]]
+print(driver_alltripsdict['052bba06c5fc0bdea4bc2f9cb92b37c7'])   
