@@ -238,6 +238,7 @@ driver_days_nparray = np.asarray(Driver_day_list).reshape(-1,1)
 
 # Check Shape
 print(driver_days_nparray.shape)
+
 """Mix 2 features together """
 a = np.append(driver_id_nparray,driver_days_nparray,axis = 1)
 # Print out the numpy array
