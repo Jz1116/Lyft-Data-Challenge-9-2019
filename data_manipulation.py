@@ -110,7 +110,7 @@ for i in rideid_driver_timedict.keys():
 # Print out all rides' time give a driver id
 print(driver_alltripsdict['007f0389f9c7b03ef97098422f902e62'])
 
-# Split the date to only fetch month and day
+# Split the date to only fetch month and
 for i in driver_alltripsdict.keys():
     for j in range(len(driver_alltripsdict[i])):
         driver_alltripsdict[i][j] = driver_alltripsdict[i][j].split()[0].split("-")[1:]
@@ -118,7 +118,7 @@ for i in driver_alltripsdict.keys():
 # Print out all months and days of all rides given a driver id
 print(driver_alltripsdict['007f0389f9c7b03ef97098422f902e62'])
 
-# Change dates from string to integer 
+# Change dates from string to integer
 for i in driver_alltripsdict.keys():
     for j in range(len(driver_alltripsdict[i])):
         driver_alltripsdict[i][j] = [int(driver_alltripsdict[i][j][0]),int(driver_alltripsdict[i][j][1])]
