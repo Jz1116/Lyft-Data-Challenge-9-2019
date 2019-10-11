@@ -562,3 +562,12 @@ print(test_labels)
 from pandas import DataFrame
 new = DataFrame(pmax_pred, test_labels)
 new.to_csv("line_to_scatter_converter.csv")
+
+mid = pd.read_csv("line_to_scatter_converter.csv")
+mid.sort_values(by = "truth", inplace = True)
+
+mid.to_csv("lts_sort.csv", index = False)
+final = pd.read_csv("lts_sort.csv")
+index = final.index
+pmax_pred = final["predict"]
+label = final["truth"]
