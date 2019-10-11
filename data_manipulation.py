@@ -259,4 +259,3 @@ for i in Driver_ID_LIST:
         Driver_LTV_list.append(LTV_dict[i])
 
 driver_LTV_nparrays = np.asarray(Driver_LTV_list).reshape(-1,1)
-print(driver_LTV_nparrays.shape)
