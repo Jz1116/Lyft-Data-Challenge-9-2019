@@ -227,7 +227,7 @@ for i in driver_on_offdict.keys():
 # Convert to numpy array
 driver_id_nparray = np.asarray(Driver_ID_LIST).reshape(-1,1)
 
-rint(driver_id_nparray.shape)
+print(driver_id_nparray.shape)
 
 '''feature2: Days in Lyft'''
 Driver_day_list = []
