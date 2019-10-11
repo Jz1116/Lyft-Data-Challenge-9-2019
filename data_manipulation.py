@@ -370,5 +370,5 @@ for i in Driver_ID_LIST:
 
 total_time_nparray = np.asarray(total_time_list).reshape(-1,1)
 
-
+# Check shape
 print(total_time_nparray.shape)
