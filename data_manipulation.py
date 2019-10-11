@@ -531,3 +531,8 @@ mape = 100 * (errors / test_labels)
 # Calculate and display accuracy
 accuracy = 100 - np.mean(mape)
 print('Accuracy:', round(accuracy, 2), '%.')
+
+# Linear Regression
+clf = svm.SVR(kernel = "linear")
+clf.fit(train_features,train_labels)
+print(clf.score(train_features, train_labels))
